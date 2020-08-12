@@ -1,0 +1,13 @@
+{
+    "name": "vidddd/futbol.loterialaveleta.com",
+    "authors": [
+        {
+            "name": "David Alvarez",
+            "email": "david@hipertintorero.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^2.0",
+        "guzzlehttp/guzzle": "^6.0"
+    }
+}

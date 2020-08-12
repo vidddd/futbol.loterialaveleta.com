@@ -1,0 +1,57 @@
+ <table id="table-clasificacion" class="laqu sombra-lg">
+                <caption>Clasificaci&oacute;n Primera Divisi&oacute;n</caption>
+                  <tr>
+                    <td>
+                      <table class="tabla">
+                        <thead>
+                          <tr>
+                            <th>Posicion</th>
+                            <th>Equipo</th>
+                            <th>Puntos</th>
+                            <th>Jugados</th>
+                            <th>Ganados</th>
+                            <th>Perdidos</th>
+                            <th>Goles a favor</th>
+                            <th>Goles en Contra</th>
+                          </tr>
+                        </thead>
+                        {% for clasi in clasificacion %}
+                        <tbody>
+                        <tr class="{{ loop.index0 is odd ? 'sombreado' : '' }}">
+                        <td class="derecha">{{ clasi.position }}</td>
+                        <td>{{ clasi.team.name }}</td>
+                        <td>{{ clasi.points }}</td>
+                        <td>{{ clasi.playedGames }}</td>
+                        <td>{{ clasi.won }}</td>
+                        <td>{{ clasi.lost }}</td>
+                        <td>{{ clasi.goalsFor }}</td>
+                        <td>{{ clasi.goalsAgainst }}</td>
+                        <td>{{ clasi.goalsDifference }}</td>
+                        </tr>
+                                {% endfor %}
+                        </tbody>
+                       </table>
+                     </td> 
+                </tr>
+             </table>   
+             {#
+                [19] => stdClass Object
+                    (
+                        [position] => 20
+                        [team] => stdClass Object
+                            (
+                                [id] => 80
+                                [name] => RCD Espanyol de Barcelona
+                                [crestUrl] => http://upload.wikimedia.org/wikipedia/de/a/a7/RCD_Espanyol_De_Barcelona.svg
+                            )
+
+                        [playedGames] => 36
+                        [won] => 5
+                        [draw] => 9
+                        [lost] => 22
+                        [points] => 24
+                        [goalsFor] => 27
+                        [goalsAgainst] => 57
+                        [goalDifference] => -30
+                    )
+             #}

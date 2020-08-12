@@ -1,0 +1,32 @@
+
+ <table id="table-quiniela" class="laqu sombra-lg">
+  <caption>RESULTADO QUINIELA</caption>
+  <tr>
+    <td>
+      <table class="tabla">
+        <tbody>
+          {% for partido in partidos_laqu %}
+            <tr class="{{ loop.index0 is odd ? 'sombreado' : '' }}">
+              <td>{{ partido.local }}</td>
+              <td>{{ partido.visitante }}</td>
+              <td>{{ partido.signo }}</td>
+              <td>{{ partido.marcador }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </td> 
+  </tr>
+  <tr>
+    <td>
+      <table class="tabla2">
+        <tr>
+          <td>
+            <p><i>{{ laqu.fecha_sorteo|date('d/m/Y') }}</i></p>
+            <p>Jornada: <strong>{{ laqu.jornada }}</strong></p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

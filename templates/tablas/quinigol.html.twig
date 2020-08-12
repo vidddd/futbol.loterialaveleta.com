@@ -1,0 +1,32 @@
+<table id="table-quinigol" class="tabla4 qgol sombra-lg">
+  <caption>RESULTADO QUINIGOL</caption>
+  <tr>
+    <td>
+      <table class="tabla">
+        <tbody>
+          {% set part = qgol.partidos %}
+          {% for partido in partidos_qgol %}
+          <tr class="{{ loop.index0 is odd ? 'sombreado' : '' }}">
+            <td>{{ partido.local }}</td>
+            <td>{{ partido.visitante }}</td>
+            <td>{{ partido.signo }}</td>
+            <td>{{ partido.marcador }}</td>
+          </tr>
+          {% endfor %}
+         </tbody>
+        </table>
+      </td> 
+    </tr>
+    <tr>
+      <td>
+        <table class="tabla2">
+          <tr>
+            <td>
+              <p><i>{{ qgol.fecha_sorteo|date('d/m/Y') }}</i></p>
+              <p>Jornada: <strong>{{ qgol.jornada }}</strong></p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+</table>

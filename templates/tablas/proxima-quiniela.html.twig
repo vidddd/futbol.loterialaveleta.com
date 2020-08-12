@@ -1,0 +1,35 @@
+
+<div class="widget-title">
+      <h3 class="title">Pr&oacute;xima Quiniela</h3>
+      <!-- <a class="more" href="">Show more</a> -->
+</div>
+<p class="jornada">Jornada:<strong>{{ proximaQuiniela.field_jornada_value }}</strong></p>
+<p class="jornada">Fecha Sorteo: <strong>{{ proximaQuiniela.fecha|date('l, d/m/Y')|replace({
+                                                                                            'Monday'  : 'Lunes',
+                                                                                            'Tuesday' : 'Martes',
+                                                                                            'Wednesday'   : 'Miercoles',
+                                                                                            'Thursday'   : 'Jueves',
+                                                                                            'Friday'   : 'Viernes',
+                                                                                            'Saturday'   : 'Sábado',
+                                                                                            'Sunday'   : 'Domingo'
+                                                                                          }) }}</strong></p>
+      <table class="tabla3 sombra-lg">
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <th>Local</th>
+                <th>Visitante</th>
+                <th>Fecha y Hora</th>
+              </tr>
+              {% for partido in proximos_partidos_laqu %}
+              <tr class="{{ loop.index0 is odd ? 'sombreado' : '' }}">
+                <td>{{ partido.local }}</td>
+                <td>{{ partido.visitante }}</td>
+                <td>{{ partido.fecha|date('d/m/Y     H:i') }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+          </td>
+        </tr>
+      </table>

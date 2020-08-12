@@ -1,0 +1,37 @@
+{% extends "html.html.twig" %}
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4 bloque1">
+      <div class="row">
+        <div class="col">
+          <img id="bruja" src="../images/laveleta-blanco.png" width="450" class="mx-auto d-block" title="Loteria La Veleta" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center" id="logo-quiniela" style="display:none;">
+          <img src="../images/logos/quiniela.svg" width="450px;" class="mx-auto d-block" title="Quiniela" />
+        </div>
+        <div class="col text-center" id="logo-quinigol" style="display:none;">
+          <img src="../images/logos/quinigol.svg" width="450px;" class="mx-auto d-block" title="Quinigol" />
+        </div>
+      </div>
+    </div>
+    <div class="col-sm" id="clasificacion-primera" style="display:none;"> 
+      {% include 'tablas/clasificacion-primera.html.twig' %}
+     </div>
+    <div class="col-sm" id="resultado-quiniela" style="display:none;"> 
+       {% include 'tablas/quiniela.html.twig' %} 
+    </div>
+    <div class="col-sm" id="resultado-quinigol" style="display:none;"> 
+       {% include 'tablas/quinigol.html.twig' %} 
+    </div>
+    <div class="col-sm" id="proximo-quiniela" style="display:none;"> 
+       {% include 'tablas/proxima-quiniela.html.twig' %} 
+    </div>
+    <div class="col-sm" id="proximo-quinigol" style="display:none;"> 
+       {% include 'tablas/proximo-quinigol.html.twig' %} 
+    </div>
+  </div>
+</div>
+{% endblock %}
