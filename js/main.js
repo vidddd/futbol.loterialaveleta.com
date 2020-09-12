@@ -1,6 +1,6 @@
 const tiempoLogos = 3000;
 const tiempoTablas = 15000;
-const tiempoBruja = 55000;
+const tiempoBruja = 15000;
 const logoQuiniela = document.getElementById("logo-quiniela");
 const logoQuinigol = document.getElementById("logo-quinigol");
 const clasificacionPrimera = document.getElementById("clasificacion-primera");
@@ -9,7 +9,8 @@ const resultadoQuinigol = document.getElementById("resultado-quinigol");
 const proximoQuiniela = document.getElementById("proximo-quiniela");
 const proximoQuinigol = document.getElementById("proximo-quinigol");
 var estadoLogo = true;
-var estados = [false, false, true];
+//var estados = [false, false, true];
+var estados = [false, true];
 
 mostrar(logoQuinigol);
 mostrar(proximoQuiniela);
@@ -30,19 +31,36 @@ setInterval(function () {
 setInterval(function () {
     for (i = 0; i < estados.length; i++) {
         if (estados[0]) {
-            ocultar(proximoQuiniela); ocultar(proximoQuinigol);
-            mostrar(clasificacionPrimera);
-            estados[1] = true; estados[0] = false; break;
+            ocultar(resultadoQuiniela);
+            ocultar(resultadoQuinigol);
+            mostrar(proximoQuiniela);
+            mostrar(proximoQuinigol);
+            //mostrar(clasificacionPrimera);
+            estados[1] = true;
+            estados[0] = false;
+            console.log("0");
+            break;
         }
         if (estados[1]) {
-            ocultar(clasificacionPrimera);
-            mostrar(resultadoQuiniela); mostrar(resultadoQuinigol);
-            estados[2] = true; estados[1] = false; break;
+            //ocultar(clasificacionPrimera);
+            ocultar(proximoQuiniela);
+            ocultar(proximoQuinigol);
+            mostrar(resultadoQuiniela);
+            mostrar(resultadoQuinigol);
+            //estados[2] = true;
+            estados[1] = false;
+            estados[0] = true;
+            console.log("1");
+            break;
         }
         if (estados[2]) {
-            ocultar(resultadoQuiniela); ocultar(resultadoQuinigol);
-            mostrar(proximoQuiniela); mostrar(proximoQuinigol);
-            estados[0] = true; estados[2] = false; break;
+            ocultar(resultadoQuiniela);
+            ocultar(resultadoQuinigol);
+            mostrar(proximoQuiniela);
+            mostrar(proximoQuinigol);
+            estados[0] = true;
+            //estados[2] = false;
+            break;
         }
     }
 
@@ -66,7 +84,9 @@ function mostrar(elem) {
 
 $(document).ready(function () {
     setInterval(function () {
-        $('#bruja').rotate3Di('flip', 250, { direction: 'clockwise' });
+        $('#bruja').rotate3Di('flip', 250, {
+            direction: 'clockwise'
+        });
         $('#bruja').rotate3Di('unflip', 500, {});
     }, tiempoBruja);
 
