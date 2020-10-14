@@ -7,10 +7,12 @@
         <tbody>
           {% for partido in partidos_laqu %}
             <tr class="{{ loop.index0 is odd ? 'sombreado' : '' }}">
-              <td>{{ partido.local }}</td>
-              <td>{{ partido.visitante }}</td>
-              <td>{{ partido.signo }}</td>
-              <td>{{ partido.marcador }}</td>
+              <td>{{ partido.local|default('') }}</td>
+              <td>{{ partido.visitante|default('') }}</td>
+              <td>{{ partido.signo|default('') }}</td>
+              <td>{% if partido.marcador != 'null - null' %}
+                {{ partido.marcador|default('') }}
+              </td>{% endif %}
             </tr>
           {% endfor %}
         </tbody>

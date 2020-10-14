@@ -38,7 +38,6 @@ setInterval(function () {
             //mostrar(clasificacionPrimera);
             estados[1] = true;
             estados[0] = false;
-            console.log("0");
             break;
         }
         if (estados[1]) {
@@ -50,7 +49,6 @@ setInterval(function () {
             //estados[2] = true;
             estados[1] = false;
             estados[0] = true;
-            console.log("1");
             break;
         }
         if (estados[2]) {
