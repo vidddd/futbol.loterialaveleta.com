@@ -1,0 +1,43 @@
+.buy {
+  font-size: 14px;
+}
+
+.buy .commerce-order-item-add-to-cart-form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.buy .form__item {
+  margin: 0;
+}
+
+.buy .wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.buy .field--name-quantity {
+  width: calc(100% - 80px);
+  flex: 1 0 auto;
+}
+
+.buy .commerce-order-item-add-to-cart-form > .form__item {
+  width: 80px;
+  height: 43px;
+  flex: 1 0 auto;
+}
+
+.buy__button .button {
+  flex: 1 0 auto;
+  margin-left: 12px;
+  -webkit-box-flex: 1;
+  justify-content: center;
+
+  padding: 7px 20px;
+  background-color: #8fc034;
+
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
