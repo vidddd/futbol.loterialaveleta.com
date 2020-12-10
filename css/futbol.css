@@ -4,6 +4,7 @@
   font-weight: 400;
   src: local("Poppins Medium"), url(../fonts/Poppins-Medium.woff) format("woff");
 }
+
 @font-face {
   font-family: Poppins SemiBold;
   font-style: normal;
@@ -19,16 +20,19 @@ body {
   overflow-x: hidden;
   padding: 2%;
 }
+
 table {
   background-color: #fff;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+
 .tabla {
   margin: 15px 40px;
   border-collapse: collapse;
   background-color: #fff;
 }
+
 table caption {
   color: #fff;
   font-size: 1.5em;
@@ -38,61 +42,79 @@ table caption {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
+
 .tabla td {
   padding: 4px;
   box-sizing: border-box;
   border: 0 !important;
 }
+
 .derecha {
   text-align: right;
 }
+
 .laqu caption {
   background-color: #cb1517;
 }
+
 .laqu .sombreado {
   background-color: rgba(227, 6, 19, 0.05);
 }
+
 .qgol caption {
   background-color: rgba(64, 186, 206, 0.7);
 }
+
 .qgol .sombreado {
   background-color: rgba(64, 186, 206, 0.08);
 }
+
 .bloque1 img {
   margin-top: 28px;
 }
+
 .sombra-lg {
   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.19) !important;
 }
-.laqu .tabla td, .qgol .tabla td{
-  padding:6px;
+
+.laqu .tabla td,
+.qgol .tabla td {
+  padding: 6px;
 }
-.tabla th{
-  font-weight:normal;
+
+.tabla th {
+  font-weight: normal;
 }
+
 .tabla2 {
-  width:90%;
+  width: 90%;
 }
+
 .tabla2 p {
-  margin:0;
-  text-align:right;
-  font-size:1.1em;
+  margin: 0;
+  text-align: right;
+  font-size: 1.1em;
 }
+
 h1 {
   text-align: center;
   font-size: 1.8em;
 }
 
 /* PROXIMA QUINIELA y QUINIGOL */
-#proximo-quiniela, #proximo-quinigol {
-font-family: 'Roboto', sans-serif;
+#proximo-quiniela,
+#proximo-quinigol {
+  font-family: 'Roboto', sans-serif;
 }
-#proximo-quiniela h2, #proximo-quinigol h2{
+
+#proximo-quiniela h2,
+#proximo-quinigol h2 {
   font-weight: bolder;
   font-size: 2.4em;
   letter-spacing: 0.1em;
-  margin:0 0 10px 0;
+  margin: 0 0 10px 0;
 }
+
 /*
 #proximo-quiniela h2 {
   color: #CC1517;
@@ -103,38 +125,42 @@ font-family: 'Roboto', sans-serif;
   text-shadow: 1px 1px 2px rgba(69,190,207,0.37);
 }*/
 .widget-title {
-    position: relative;
-    float: left;
-    width: 100%;
-    height: 40px;
-    display: block;
-    margin: 0 0 15px;
-    border-bottom: 3px solid #CC1517;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 40px;
+  display: block;
+  margin: 0 0 15px;
+  border-bottom: 3px solid #CC1517;
 }
+
 #proximo-quinigol .widget-title {
   border-bottom: 3px solid #45BECF !important;
 }
-.widget-title > h3 {
-    position: relative;
-    float: left;
-    height: 40px;
-    background-color: #CC1517;
-    font-size: 28px;
-    color: #ffffff;
-    font-weight: 700;
-    line-height: 40px;
-    padding: 0 13px;
-    margin: 0;
+
+.widget-title>h3 {
+  position: relative;
+  float: left;
+  height: 40px;
+  background-color: #CC1517;
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 40px;
+  padding: 0 13px;
+  margin: 0;
 }
-#proximo-quinigol .widget-title > h3 {
+
+#proximo-quinigol .widget-title>h3 {
   background-color: #45BECF !important;
 }
-.widget-title > .more {
-    float: right;
-    font-size: 13px;
-    color: #aaaaaa;
-    line-height: 30px;
-    padding: 0;
+
+.widget-title>.more {
+  float: right;
+  font-size: 13px;
+  color: #aaaaaa;
+  line-height: 30px;
+  padding: 0;
 }
 
 .tabla3 {
@@ -145,25 +171,30 @@ font-family: 'Roboto', sans-serif;
   font-size: 1.1em;
   margin-top: 15px;
 }
-.tabla3 td{
-  padding:6px;
+
+.tabla3 td {
+  padding: 6px;
 }
+
 .tabla3 th {
   padding: 4px;
   font-size: 0.9em;
   background-color: #a5a9ac;
-  color: #fff; 
+  color: #fff;
   font-weight: lighter;
 }
+
 .tabla3 .sombreado {
   background-color: rgba(141, 135, 136, 0.05);
 }
+
 .jornada {
   margin: 5px 20px;
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: #3c3e3f;
   letter-spacing: 2px;
 }
+
 .fade-in {
   animation: fadeIn ease 2s;
   -webkit-animation: fadeIn ease 2s;
@@ -171,99 +202,112 @@ font-family: 'Roboto', sans-serif;
   -o-animation: fadeIn ease 2s;
   -ms-animation: fadeIn ease 2s;
 }
+
 /* FADE-IN */
 @keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-moz-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-o-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-ms-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
+  }
 }
-}
+
 /* FADE-OUT */
 .fade-out {
   animation: fadeOut ease 1s;
-  -webkit-animation: fadeOut ease 1s; 
+  -webkit-animation: fadeOut ease 1s;
   -moz-animation: fadeOut ease 1s;
   -o-animation: fadeOut ease 1s;
   -ms-animation: fadeOut ease 1s;
 }
+
 @keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
+
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
 @-moz-keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
+
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
 @-webkit-keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
+
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
 @-o-keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
+
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
 @-ms-keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
+
   100% {
-    opacity:0;
-}
+    opacity: 0;
+  }
