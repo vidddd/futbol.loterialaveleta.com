@@ -3,8 +3,9 @@ error_reporting(E_ALL ^ E_NOTICE);
 require_once "vendor/autoload.php";
 include 'api/phplib-football/FootballData.php';
 
-use GuzzleHttp\Client;
+//use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
+//use Psr7;
 
 $laqu = []; // Resultado de la Quiniela
 $qgol = []; // Resultado Quinigol
@@ -14,9 +15,9 @@ $client = new GuzzleHttp\Client(['base_uri' => 'https://loterialaveleta.com/']);
 try {
    $response = $client->request('GET', 'resultados/dameresultados');
 } catch (RequestException $e) {
-   echo Psr7\str($e->getRequest());
+   echo print_r($e->getRequest());
    if ($e->hasResponse()) {
-      echo Psr7\str($e->getResponse());
+      // echo Psr7\str($e->getResponse());
    }
 }
 $body = $response->getBody();
@@ -29,7 +30,10 @@ $qgol = $content->data->qgol[0]; // Resultados Ultimo Quinigol
 try {
    $response = $client->request('GET', 'sorteos/proximosorteo/LAQU');
 } catch (RequestException $e) {
-   echo print_r($e->getRequest());if ($e->hasResponse()) {echo print_r($e->getResponse());}
+   echo print_r($e->getRequest());
+   if ($e->hasResponse()) {
+      echo print_r($e->getResponse());
+   }
 }
 $body = $response->getBody();
 $content = json_decode($body->getContents());
